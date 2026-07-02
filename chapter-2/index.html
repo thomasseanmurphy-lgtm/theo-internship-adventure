@@ -162,7 +162,13 @@
   .btn-val:hover{transform:translateY(-2px);}
   .btn-val:active{transform:translateY(1px) scale(.97);}
   .btn-val.done{background:var(--green);}
+  .btn-val.locked{background:#9aa6b2;cursor:default;}
   .modmsg{font-family:'Baloo 2';font-weight:700;font-size:14px;color:var(--grape-d);}
+  /* once checked, dropdowns lock (can't change an error) and the right answer is revealed on mistakes */
+  select:disabled{opacity:1;cursor:not-allowed;}
+  .answer-reveal{display:inline-block;background:#e2fbf1;color:#0f7a55;border:2px solid var(--green);
+    border-radius:999px;padding:1px 11px;margin:4px 0 0 6px;font-family:'Baloo 2';font-weight:700;font-size:14px;white-space:normal;}
+  .answer-reveal::before{content:"✔ ";}
   .burst-p{position:fixed;z-index:80;width:10px;height:10px;border-radius:2px;animation:burst .9s cubic-bezier(.15,.7,.3,1) forwards;}
   @keyframes burst{from{transform:translate(0,0) rotate(0);opacity:1;}to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0;}}
 
@@ -229,14 +235,14 @@
   <div class="card c-pink">
     <div class="head"><span class="ico">🧩</span><h3>Match the word &amp; the meaning</h3><span class="pts">8 pts</span></div>
     <ol class="q vmatch">
-      <li>a meeting where you answer questions to get a job → <select class="wide" id="a1_1"><option value=""></option><option>contract</option><option>interview</option><option>candidate</option><option>salary</option><option>strengths</option><option>application</option><option>weaknesses</option><option>recruiter</option></select></li>
-      <li>a person who wants a job → <select class="wide" id="a1_2"><option value=""></option><option>application</option><option>recruiter</option><option>weaknesses</option><option>salary</option><option>contract</option><option>candidate</option><option>interview</option><option>strengths</option></select></li>
-      <li>a formal request to get a job → <select class="wide" id="a1_3"><option value=""></option><option>candidate</option><option>strengths</option><option>application</option><option>weaknesses</option><option>interview</option><option>contract</option><option>salary</option><option>recruiter</option></select></li>
-      <li>the money you earn each month → <select class="wide" id="a1_4"><option value=""></option><option>weaknesses</option><option>salary</option><option>contract</option><option>candidate</option><option>interview</option><option>strengths</option><option>recruiter</option><option>application</option></select></li>
-      <li>the things you are good at → <select class="wide" id="a1_5"><option value=""></option><option>weaknesses</option><option>salary</option><option>strengths</option><option>recruiter</option><option>application</option><option>candidate</option><option>interview</option><option>contract</option></select></li>
-      <li>the things you find difficult → <select class="wide" id="a1_6"><option value=""></option><option>strengths</option><option>recruiter</option><option>candidate</option><option>weaknesses</option><option>salary</option><option>interview</option><option>application</option><option>contract</option></select></li>
-      <li>a signed agreement to work for a company → <select class="wide" id="a1_7"><option value=""></option><option>candidate</option><option>interview</option><option>salary</option><option>contract</option><option>weaknesses</option><option>recruiter</option><option>strengths</option><option>application</option></select></li>
-      <li>the person who looks for and hires new staff → <select class="wide" id="a1_8"><option value=""></option><option>weaknesses</option><option>interview</option><option>strengths</option><option>salary</option><option>recruiter</option><option>contract</option><option>candidate</option><option>application</option></select></li>
+      <li>a meeting where you answer questions to get a job → <select class="wide" id="a1_1"><option value=""></option><option>weaknesses</option><option>interview</option><option>contract</option><option>recruiter</option><option>salary</option><option>candidate</option><option>strengths</option><option>application</option></select></li>
+      <li>a person who wants a job → <select class="wide" id="a1_2"><option value=""></option><option>candidate</option><option>application</option><option>recruiter</option><option>contract</option><option>strengths</option><option>salary</option><option>interview</option><option>weaknesses</option></select></li>
+      <li>a formal request to get a job → <select class="wide" id="a1_3"><option value=""></option><option>salary</option><option>application</option><option>contract</option><option>weaknesses</option><option>candidate</option><option>recruiter</option><option>strengths</option><option>interview</option></select></li>
+      <li>the money you earn each month → <select class="wide" id="a1_4"><option value=""></option><option>strengths</option><option>application</option><option>candidate</option><option>salary</option><option>contract</option><option>recruiter</option><option>weaknesses</option><option>interview</option></select></li>
+      <li>the things you are good at → <select class="wide" id="a1_5"><option value=""></option><option>candidate</option><option>salary</option><option>recruiter</option><option>contract</option><option>weaknesses</option><option>interview</option><option>strengths</option><option>application</option></select></li>
+      <li>the things you find difficult → <select class="wide" id="a1_6"><option value=""></option><option>recruiter</option><option>candidate</option><option>salary</option><option>weaknesses</option><option>application</option><option>strengths</option><option>interview</option><option>contract</option></select></li>
+      <li>a signed agreement to work for a company → <select class="wide" id="a1_7"><option value=""></option><option>strengths</option><option>candidate</option><option>salary</option><option>recruiter</option><option>contract</option><option>interview</option><option>weaknesses</option><option>application</option></select></li>
+      <li>the person who looks for and hires new staff → <select class="wide" id="a1_8"><option value=""></option><option>salary</option><option>interview</option><option>recruiter</option><option>contract</option><option>candidate</option><option>weaknesses</option><option>application</option><option>strengths</option></select></li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="A1 Match">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -245,14 +251,14 @@
   <div class="card c-sun">
     <div class="head"><span class="ico">⏳</span><h3>Present perfect or past simple?</h3><span class="pts">8 pts</span></div>
     <ol class="q">
-      <li>The company <select id="b1_1"><option value=""></option><option>grows</option><option>grew</option><option>has grown</option></select> a lot <span class="tw">since 2010</span>.</li>
-      <li><span class="tw">Last year</span>, they <select id="b1_2"><option value=""></option><option>open</option><option>opened</option><option>have opened</option></select> a new hub.</li>
-      <li><select id="b1_3"><option value=""></option><option>Do</option><option>Have</option><option>Did</option></select> you <span class="tw">ever</span> had a job interview?</li>
-      <li>He has <span class="tw">just</span> <select id="b1_4"><option value=""></option><option>sends</option><option>send</option><option>sent</option></select> his CV to the recruiter.</li>
-      <li><span class="tw">In 2019</span>, the firm <select id="b1_5"><option value=""></option><option>wins</option><option>has won</option><option>won</option></select> a big award.</li>
-      <li>They <select id="b1_6"><option value=""></option><option>worked</option><option>work</option><option>have worked</option></select> in logistics <span class="tw">for thirty years</span>.</li>
-      <li><span class="tw">Yesterday</span>, the recruiter <select id="b1_7"><option value=""></option><option>phones</option><option>has phoned</option><option>phoned</option></select> Théo.</li>
-      <li>We <select id="b1_8"><option value=""></option><option>have</option><option>had</option><option>have had</option></select> this client <span class="tw">since 2015</span>.</li>
+      <li>The company <select id="b1_1"><option value=""></option><option>grew</option><option>has grown</option><option>grows</option></select> a lot <span class="tw">since 2010</span>.</li>
+      <li><span class="tw">Last year</span>, they <select id="b1_2"><option value=""></option><option>have opened</option><option>opened</option><option>open</option></select> a new hub.</li>
+      <li><select id="b1_3"><option value=""></option><option>Did</option><option>Do</option><option>Have</option></select> you <span class="tw">ever</span> had a job interview?</li>
+      <li>He has <span class="tw">just</span> <select id="b1_4"><option value=""></option><option>send</option><option>sends</option><option>sent</option></select> his CV to the recruiter.</li>
+      <li><span class="tw">In 2019</span>, the firm <select id="b1_5"><option value=""></option><option>wins</option><option>won</option><option>has won</option></select> a big award.</li>
+      <li>They <select id="b1_6"><option value=""></option><option>worked</option><option>have worked</option><option>work</option></select> in logistics <span class="tw">for thirty years</span>.</li>
+      <li><span class="tw">Yesterday</span>, the recruiter <select id="b1_7"><option value=""></option><option>has phoned</option><option>phones</option><option>phoned</option></select> Théo.</li>
+      <li>We <select id="b1_8"><option value=""></option><option>have</option><option>have had</option><option>had</option></select> this client <span class="tw">since 2015</span>.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="B1 Perfect/Past">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -262,14 +268,14 @@
     <div class="head"><span class="ico">🇫🇷</span><h3>Traduis : present perfect ou prétérit ?</h3><span class="pts">8 pts</span></div>
     <p class="instr">Lis la phrase française et choisis la bonne traduction anglaise. Le repère de temps te dit quel temps utiliser.</p>
     <ol class="q vmatch">
-      <li>« L'entreprise a beaucoup grandi depuis 2010. » <select id="tr_1"><option value=""></option><option>The company grew a lot since 2010.</option><option>The company has grown a lot since 2010.</option></select></li>
+      <li>« L'entreprise a beaucoup grandi depuis 2010. » <select id="tr_1"><option value=""></option><option>The company has grown a lot since 2010.</option><option>The company grew a lot since 2010.</option></select></li>
       <li>« L'année dernière, ils ont ouvert un nouveau site. » <select id="tr_2"><option value=""></option><option>Last year, they have opened a new hub.</option><option>Last year, they opened a new hub.</option></select></li>
-      <li>« Il a déjà envoyé son CV. » <select id="tr_3"><option value=""></option><option>He has already sent his CV.</option><option>He already sent his CV.</option></select></li>
+      <li>« Il a déjà envoyé son CV. » <select id="tr_3"><option value=""></option><option>He already sent his CV.</option><option>He has already sent his CV.</option></select></li>
       <li>« Hier, elle a téléphoné à Théo. » <select id="tr_4"><option value=""></option><option>Yesterday, she phoned Théo.</option><option>Yesterday, she has phoned Théo.</option></select></li>
       <li>« Ils travaillent dans la logistique depuis trente ans. » <select id="tr_5"><option value=""></option><option>They have worked in logistics for thirty years.</option><option>They worked in logistics for thirty years.</option></select></li>
-      <li>« Il y a deux ans, l'entreprise a gagné un prix. » <select id="tr_6"><option value=""></option><option>Two years ago, the company won an award.</option><option>Two years ago, the company has won an award.</option></select></li>
+      <li>« Il y a deux ans, l'entreprise a gagné un prix. » <select id="tr_6"><option value=""></option><option>Two years ago, the company has won an award.</option><option>Two years ago, the company won an award.</option></select></li>
       <li>« Nous n'avons pas encore signé le contrat. » <select id="tr_7"><option value=""></option><option>We didn't sign the contract yet.</option><option>We haven't signed the contract yet.</option></select></li>
-      <li>« La semaine dernière, il a préparé ses réponses. » <select id="tr_8"><option value=""></option><option>Last week, he prepared his answers.</option><option>Last week, he has prepared his answers.</option></select></li>
+      <li>« La semaine dernière, il a préparé ses réponses. » <select id="tr_8"><option value=""></option><option>Last week, he has prepared his answers.</option><option>Last week, he prepared his answers.</option></select></li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="TR Traduction">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -284,9 +290,9 @@
       <li>This form is <select id="ft_3"><option value=""></option><option>for</option><option>to</option></select> new applicants.</li>
       <li>She called him <select id="ft_4"><option value=""></option><option>for</option><option>to</option></select> offer him the job.</li>
       <li>He bought a new shirt <select id="ft_5"><option value=""></option><option>to</option><option>for</option></select> the interview.</li>
-      <li>He researched the firm <select id="ft_6"><option value=""></option><option>for</option><option>to</option></select> impress the manager.</li>
+      <li>He researched the firm <select id="ft_6"><option value=""></option><option>to</option><option>for</option></select> impress the manager.</li>
       <li>Thank you <select id="ft_7"><option value=""></option><option>for</option><option>to</option></select> your application.</li>
-      <li>They use robots <select id="ft_8"><option value=""></option><option>for</option><option>to</option></select> move the pallets.</li>
+      <li>They use robots <select id="ft_8"><option value=""></option><option>to</option><option>for</option></select> move the pallets.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="FT For/To">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -296,14 +302,14 @@
     <div class="head"><span class="ico">🔄</span><h3>The passive voice</h3><span class="pts">8 pts</span></div>
     <p class="instr">Qui fait l'action n'est pas important : on utilise la voix passive (be + participe passé).</p>
     <ol class="q">
-      <li>The candidates <select id="pv_1"><option value=""></option><option>interview</option><option>are interviewed</option><option>interviews</option></select> by the manager.</li>
-      <li>Théo <select id="pv_2"><option value=""></option><option>hired</option><option>is hired</option><option>was hired</option></select> for the job last week.</li>
+      <li>The candidates <select id="pv_1"><option value=""></option><option>interview</option><option>interviews</option><option>are interviewed</option></select> by the manager.</li>
+      <li>Théo <select id="pv_2"><option value=""></option><option>was hired</option><option>is hired</option><option>hired</option></select> for the job last week.</li>
       <li>The orders <select id="pv_3"><option value=""></option><option>prepare</option><option>are prepared</option><option>prepared</option></select> every morning.</li>
-      <li>The goods <select id="pv_4"><option value=""></option><option>delivered</option><option>were delivered</option><option>are delivered</option></select> yesterday.</li>
-      <li>English <select id="pv_5"><option value=""></option><option>used</option><option>is used</option><option>uses</option></select> in many logistics jobs.</li>
-      <li>The contract <select id="pv_6"><option value=""></option><option>signs</option><option>will be signed</option><option>will sign</option></select> next week.</li>
+      <li>The goods <select id="pv_4"><option value=""></option><option>were delivered</option><option>are delivered</option><option>delivered</option></select> yesterday.</li>
+      <li>English <select id="pv_5"><option value=""></option><option>uses</option><option>is used</option><option>used</option></select> in many logistics jobs.</li>
+      <li>The contract <select id="pv_6"><option value=""></option><option>signs</option><option>will sign</option><option>will be signed</option></select> next week.</li>
       <li>Thousands of parcels <select id="pv_7"><option value=""></option><option>sent</option><option>are sent</option><option>send</option></select> every day.</li>
-      <li>The warehouse <select id="pv_8"><option value=""></option><option>built</option><option>was built</option><option>builds</option></select> in 2015.</li>
+      <li>The warehouse <select id="pv_8"><option value=""></option><option>builds</option><option>built</option><option>was built</option></select> in 2015.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="PV Passive">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -313,13 +319,13 @@
     <div class="head"><span class="ico">⚠️</span><h3>Interview advice (modals)</h3><span class="pts">8 pts</span></div>
     <ol class="q">
       <li>You <select id="mod_1"><option value=""></option><option>needn't</option><option>mustn't</option><option>should</option></select> research the company before the interview.</li>
-      <li>You <select id="mod_2"><option value=""></option><option>must</option><option>mustn't</option><option>should</option></select> be late — arrive early!</li>
-      <li>You <select id="mod_3"><option value=""></option><option>should</option><option>don't have to</option><option>shouldn't</option></select> wear clean, smart clothes.</li>
-      <li>You <select id="mod_4"><option value=""></option><option>mustn't</option><option>have to</option><option>must</option></select> lie about your skills.</li>
-      <li>You <select id="mod_5"><option value=""></option><option>shouldn't</option><option>should</option><option>mustn't</option></select> bring a copy of your CV.</li>
+      <li>You <select id="mod_2"><option value=""></option><option>should</option><option>mustn't</option><option>must</option></select> be late — arrive early!</li>
+      <li>You <select id="mod_3"><option value=""></option><option>shouldn't</option><option>should</option><option>don't have to</option></select> wear clean, smart clothes.</li>
+      <li>You <select id="mod_4"><option value=""></option><option>have to</option><option>must</option><option>mustn't</option></select> lie about your skills.</li>
+      <li>You <select id="mod_5"><option value=""></option><option>mustn't</option><option>should</option><option>shouldn't</option></select> bring a copy of your CV.</li>
       <li>You <select id="mod_6"><option value=""></option><option>mustn't</option><option>don't have to</option><option>must</option></select> turn off your phone during the interview.</li>
-      <li>You <select id="mod_7"><option value=""></option><option>have to</option><option>mustn't</option><option>don't have to</option></select> know everything — just be honest.</li>
-      <li>At the end, you <select id="mod_8"><option value=""></option><option>can</option><option>shouldn't</option><option>mustn't</option></select> ask a few questions.</li>
+      <li>You <select id="mod_7"><option value=""></option><option>don't have to</option><option>mustn't</option><option>have to</option></select> know everything — just be honest.</li>
+      <li>At the end, you <select id="mod_8"><option value=""></option><option>shouldn't</option><option>can</option><option>mustn't</option></select> ask a few questions.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="MOD Modals">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -417,7 +423,22 @@ function boom(x,y){
   }
 }
 
-// validate ONE section; explode confetti when it is all correct
+// mark one item: colour it, reveal the right answer if wrong, then LOCK it (no changing an error afterwards)
+function lockReveal(el,id,ok){
+  el.classList.remove("correct","incorrect");
+  el.classList.add(ok?"correct":"incorrect");
+  var prev=el.parentNode.querySelector('.answer-reveal[data-for="'+id+'"]');
+  if(prev)prev.remove();
+  if(!ok){
+    var a=ANS[id];var sol=(a&&a.length)?a[0]:"";
+    var span=document.createElement("span");
+    span.className="answer-reveal";span.setAttribute("data-for",id);span.textContent=sol;
+    el.parentNode.insertBefore(span,el.nextSibling);
+  }
+  el.disabled=true;   // lock: the student can no longer change this answer
+}
+
+// validate ONE section; reveal answers + lock; explode confetti when it is all correct
 function validateSection(name,btn){
   var sec=null;for(var s=0;s<SECTIONS.length;s++){if(SECTIONS[s].name===name){sec=SECTIONS[s];break;}}
   if(!sec)return;
@@ -425,17 +446,18 @@ function validateSection(name,btn){
   for(var i=0;i<sec.ids.length;i++){
     var el=document.getElementById(sec.ids[i]);if(!el)continue;
     var ok=isCorrect(sec.ids[i],el.value);
-    el.classList.remove("correct","incorrect");el.classList.add(ok?"correct":"incorrect");
+    lockReveal(el,sec.ids[i],ok);
     if(ok)sc++;
   }
   var max=sec.ids.length,msg=btn.parentNode.querySelector(".modmsg");
+  btn.disabled=true;  // section is now locked
   if(sc===max){
     btn.classList.add("done");btn.textContent="✓ Perfect!";
     if(msg)msg.textContent=sc+" / "+max+" 🎉";
     var r=btn.getBoundingClientRect();boom(r.left+r.width/2,r.top+r.height/2);
   }else{
-    btn.classList.remove("done");btn.textContent="✓ Validate";
-    if(msg)msg.textContent=sc+" / "+max+" — try again!";
+    btn.classList.add("locked");btn.textContent="🔒 Corrigé";
+    if(msg)msg.textContent=sc+" / "+max+" — réponses corrigées 👇";
   }
 }
 
@@ -446,13 +468,15 @@ function submitPaper(){
     for(var i=0;i<sec.ids.length;i++){
       var id=sec.ids[i],el=document.getElementById(id);if(!el)continue;
       var given=el.value,ok=isCorrect(id,given);
-      el.classList.remove("correct","incorrect");
-      el.classList.add(ok?"correct":"incorrect");
+      lockReveal(el,id,ok);
       if(ok){sc++;score++;}
       items.push({id:id,label:LABELS[id]||id,section:sec.name,theme:(THEME[id]||sec.name),ok:ok?1:0,given:(given==="__blank__"?"(blanc)":(given||"").trim())});
     }
     perSection.push({name:sec.name,sc:sc,max:sec.ids.length});
   }
+  // lock every section button too — nothing can be changed after checking
+  var vbtns=document.querySelectorAll('.btn-val');
+  for(var vb=0;vb<vbtns.length;vb++){ if(!vbtns[vb].disabled){ vbtns[vb].disabled=true; vbtns[vb].classList.add("locked"); vbtns[vb].textContent="🔒 Corrigé"; } }
   var out20=Math.round((score/TOTAL)*20*2)/2;
   LAST={test:"BAC1 Théo Ch.2 The Interview (A2-B1)",name:(getVal("stuName")||"").trim(),
     cls:(getVal("stuClass")||"").trim(),date:(getVal("stuDate")||"").trim(),
@@ -516,7 +540,9 @@ function copyCode(){
 }
 
 function resetAll(){
-  for(var i=0;i<ALLIDS.length;i++){var el=document.getElementById(ALLIDS[i]);if(!el)continue;el.selectedIndex=0;el.classList.remove("correct","incorrect");}
+  for(var i=0;i<ALLIDS.length;i++){var el=document.getElementById(ALLIDS[i]);if(!el)continue;el.selectedIndex=0;el.disabled=false;el.classList.remove("correct","incorrect");}
+  var rev=document.querySelectorAll(".answer-reveal");for(var r=0;r<rev.length;r++)rev[r].remove();
+  var vbtns=document.querySelectorAll(".btn-val");for(var vb=0;vb<vbtns.length;vb++){var bn=vbtns[vb];bn.disabled=false;bn.classList.remove("done","locked");bn.textContent="✓ Validate";var mm=bn.parentNode.querySelector(".modmsg");if(mm)mm.textContent="";}
   document.getElementById("scoreNum").textContent="— / 20";
   var ec=document.getElementById("exportCode");if(ec)ec.value="";
   LAST=null;document.getElementById("banner").classList.remove("show","win");
