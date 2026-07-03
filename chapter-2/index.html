@@ -202,7 +202,7 @@
 <body>
 
 <span class="deco d1">📞</span><span class="deco d2">👔</span><span class="deco d3">📄</span><span class="deco d4">🤝</span>
-<div id="confetti"></div>
+<canvas id="confetti"></canvas>
 
 <div class="page">
 
@@ -240,14 +240,14 @@
   <div class="card c-pink">
     <div class="head"><span class="ico">🧩</span><h3>Match the word &amp; the meaning</h3><span class="pts">8 pts</span></div>
     <ol class="q vmatch">
-      <li>a meeting where you answer questions to get a job → <select class="wide" id="a1_1"><option value=""></option><option>weaknesses</option><option>salary</option><option>candidate</option><option>interview</option><option>strengths</option><option>application</option><option>recruiter</option><option>contract</option></select></li>
-      <li>a person who wants a job → <select class="wide" id="a1_2"><option value=""></option><option>contract</option><option>weaknesses</option><option>strengths</option><option>interview</option><option>application</option><option>recruiter</option><option>salary</option><option>candidate</option></select></li>
-      <li>a formal request to get a job → <select class="wide" id="a1_3"><option value=""></option><option>interview</option><option>strengths</option><option>salary</option><option>recruiter</option><option>weaknesses</option><option>candidate</option><option>contract</option><option>application</option></select></li>
-      <li>the money you earn each month → <select class="wide" id="a1_4"><option value=""></option><option>candidate</option><option>salary</option><option>application</option><option>strengths</option><option>weaknesses</option><option>contract</option><option>recruiter</option><option>interview</option></select></li>
-      <li>the things you are good at → <select class="wide" id="a1_5"><option value=""></option><option>weaknesses</option><option>salary</option><option>interview</option><option>application</option><option>strengths</option><option>recruiter</option><option>contract</option><option>candidate</option></select></li>
-      <li>the things you find difficult → <select class="wide" id="a1_6"><option value=""></option><option>strengths</option><option>candidate</option><option>application</option><option>weaknesses</option><option>recruiter</option><option>salary</option><option>contract</option><option>interview</option></select></li>
-      <li>a signed agreement to work for a company → <select class="wide" id="a1_7"><option value=""></option><option>application</option><option>contract</option><option>recruiter</option><option>interview</option><option>salary</option><option>weaknesses</option><option>candidate</option><option>strengths</option></select></li>
-      <li>the person who looks for and hires new staff → <select class="wide" id="a1_8"><option value=""></option><option>strengths</option><option>candidate</option><option>salary</option><option>recruiter</option><option>contract</option><option>application</option><option>interview</option><option>weaknesses</option></select></li>
+      <li>a meeting where you answer questions to get a job → <select class="wide" id="a1_1"><option value=""></option><option>strengths</option><option>interview</option><option>weaknesses</option><option>salary</option><option>contract</option><option>application</option><option>recruiter</option><option>candidate</option></select></li>
+      <li>a person who wants a job → <select class="wide" id="a1_2"><option value=""></option><option>weaknesses</option><option>interview</option><option>recruiter</option><option>strengths</option><option>contract</option><option>candidate</option><option>application</option><option>salary</option></select></li>
+      <li>a formal request to get a job → <select class="wide" id="a1_3"><option value=""></option><option>application</option><option>weaknesses</option><option>recruiter</option><option>interview</option><option>candidate</option><option>contract</option><option>strengths</option><option>salary</option></select></li>
+      <li>the money you earn each month → <select class="wide" id="a1_4"><option value=""></option><option>recruiter</option><option>strengths</option><option>interview</option><option>contract</option><option>weaknesses</option><option>salary</option><option>candidate</option><option>application</option></select></li>
+      <li>the things you are good at → <select class="wide" id="a1_5"><option value=""></option><option>recruiter</option><option>interview</option><option>contract</option><option>weaknesses</option><option>application</option><option>salary</option><option>strengths</option><option>candidate</option></select></li>
+      <li>the things you find difficult → <select class="wide" id="a1_6"><option value=""></option><option>salary</option><option>strengths</option><option>interview</option><option>candidate</option><option>contract</option><option>application</option><option>weaknesses</option><option>recruiter</option></select></li>
+      <li>a signed agreement to work for a company → <select class="wide" id="a1_7"><option value=""></option><option>recruiter</option><option>candidate</option><option>weaknesses</option><option>contract</option><option>application</option><option>interview</option><option>strengths</option><option>salary</option></select></li>
+      <li>the person who looks for and hires new staff → <select class="wide" id="a1_8"><option value=""></option><option>interview</option><option>strengths</option><option>salary</option><option>recruiter</option><option>candidate</option><option>application</option><option>contract</option><option>weaknesses</option></select></li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="A1 Match">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -256,13 +256,13 @@
   <div class="card c-sun">
     <div class="head"><span class="ico">⏳</span><h3>Present perfect or past simple?</h3><span class="pts">8 pts</span></div>
     <ol class="q">
-      <li>The company <select id="b1_1"><option value=""></option><option>grew</option><option>has grown</option><option>grows</option></select> a lot <span class="tw">since 2010</span>.</li>
-      <li><span class="tw">Last year</span>, they <select id="b1_2"><option value=""></option><option>open</option><option>opened</option><option>have opened</option></select> a new hub.</li>
+      <li>The company <select id="b1_1"><option value=""></option><option>has grown</option><option>grows</option><option>grew</option></select> a lot <span class="tw">since 2010</span>.</li>
+      <li><span class="tw">Last year</span>, they <select id="b1_2"><option value=""></option><option>have opened</option><option>open</option><option>opened</option></select> a new hub.</li>
       <li><select id="b1_3"><option value=""></option><option>Do</option><option>Did</option><option>Have</option></select> you <span class="tw">ever</span> had a job interview?</li>
       <li>He has <span class="tw">just</span> <select id="b1_4"><option value=""></option><option>sends</option><option>sent</option><option>send</option></select> his CV to the recruiter.</li>
       <li><span class="tw">In 2019</span>, the firm <select id="b1_5"><option value=""></option><option>wins</option><option>has won</option><option>won</option></select> a big award.</li>
-      <li>They <select id="b1_6"><option value=""></option><option>work</option><option>worked</option><option>have worked</option></select> in logistics <span class="tw">for thirty years</span>.</li>
-      <li><span class="tw">Yesterday</span>, the recruiter <select id="b1_7"><option value=""></option><option>has phoned</option><option>phones</option><option>phoned</option></select> Théo.</li>
+      <li>They <select id="b1_6"><option value=""></option><option>have worked</option><option>work</option><option>worked</option></select> in logistics <span class="tw">for thirty years</span>.</li>
+      <li><span class="tw">Yesterday</span>, the recruiter <select id="b1_7"><option value=""></option><option>phoned</option><option>has phoned</option><option>phones</option></select> Théo.</li>
       <li>We <select id="b1_8"><option value=""></option><option>had</option><option>have</option><option>have had</option></select> this client <span class="tw">since 2015</span>.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="B1 Perfect/Past">✓ Validate</button><span class="modmsg"></span></div>
@@ -273,12 +273,12 @@
     <div class="head"><span class="ico">🇫🇷</span><h3>Traduis : present perfect ou prétérit ?</h3><span class="pts">8 pts</span></div>
     <p class="instr">Lis la phrase française et choisis la bonne traduction anglaise. Le repère de temps te dit quel temps utiliser.</p>
     <ol class="q vmatch">
-      <li>« Hier, Théo a passé son entretien. » <select id="tr_1"><option value=""></option><option>Yesterday, Théo had his interview.</option><option>Yesterday, Théo has had his interview.</option></select></li>
-      <li>« Il porte toujours une cravate à l'entretien. » <select id="tr_2"><option value=""></option><option>He always wore a tie to an interview.</option><option>He always wears a tie to an interview.</option></select></li>
-      <li>« L'entreprise a ouvert un bureau à Lyon en 2020. » <select id="tr_3"><option value=""></option><option>The company has opened an office in Lyon in 2020.</option><option>The company opened an office in Lyon in 2020.</option></select></li>
+      <li>« Hier, Théo a passé son entretien. » <select id="tr_1"><option value=""></option><option>Yesterday, Théo has had his interview.</option><option>Yesterday, Théo had his interview.</option></select></li>
+      <li>« Il porte toujours une cravate à l'entretien. » <select id="tr_2"><option value=""></option><option>He always wears a tie to an interview.</option><option>He always wore a tie to an interview.</option></select></li>
+      <li>« L'entreprise a ouvert un bureau à Lyon en 2020. » <select id="tr_3"><option value=""></option><option>The company opened an office in Lyon in 2020.</option><option>The company has opened an office in Lyon in 2020.</option></select></li>
       <li>« Elle dirige l'équipe depuis cinq ans. » <select id="tr_4"><option value=""></option><option>She managed the team for five years.</option><option>She has managed the team for five years.</option></select></li>
       <li>« Le manager a déjà lu son CV. » <select id="tr_5"><option value=""></option><option>The manager has already read his CV.</option><option>The manager already read his CV.</option></select></li>
-      <li>« La semaine dernière, ils ont embauché deux stagiaires. » <select id="tr_6"><option value=""></option><option>Last week, they have hired two trainees.</option><option>Last week, they hired two trainees.</option></select></li>
+      <li>« La semaine dernière, ils ont embauché deux stagiaires. » <select id="tr_6"><option value=""></option><option>Last week, they hired two trainees.</option><option>Last week, they have hired two trainees.</option></select></li>
       <li>« As-tu déjà négocié un salaire ? » <select id="tr_7"><option value=""></option><option>Did you ever negotiate a salary?</option><option>Have you ever negotiated a salary?</option></select></li>
       <li>« Il n'a pas encore reçu de réponse. » <select id="tr_8"><option value=""></option><option>He didn't receive an answer yet.</option><option>He hasn't received an answer yet.</option></select></li>
     </ol>
@@ -293,10 +293,10 @@
       <li>He travelled to Dijon <select id="ft_1"><option value=""></option><option>to</option><option>for</option></select> visit the company.</li>
       <li>He prepared answers <select id="ft_2"><option value=""></option><option>for</option><option>to</option></select> the interview.</li>
       <li>This form is <select id="ft_3"><option value=""></option><option>to</option><option>for</option></select> new applicants.</li>
-      <li>She called him <select id="ft_4"><option value=""></option><option>to</option><option>for</option></select> offer him the job.</li>
+      <li>She called him <select id="ft_4"><option value=""></option><option>for</option><option>to</option></select> offer him the job.</li>
       <li>He bought a new shirt <select id="ft_5"><option value=""></option><option>to</option><option>for</option></select> the interview.</li>
-      <li>He researched the firm <select id="ft_6"><option value=""></option><option>to</option><option>for</option></select> impress the manager.</li>
-      <li>Thank you <select id="ft_7"><option value=""></option><option>to</option><option>for</option></select> your application.</li>
+      <li>He researched the firm <select id="ft_6"><option value=""></option><option>for</option><option>to</option></select> impress the manager.</li>
+      <li>Thank you <select id="ft_7"><option value=""></option><option>for</option><option>to</option></select> your application.</li>
       <li>They use robots <select id="ft_8"><option value=""></option><option>to</option><option>for</option></select> move the pallets.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="FT For/To">✓ Validate</button><span class="modmsg"></span></div>
@@ -307,14 +307,14 @@
     <div class="head"><span class="ico">🔄</span><h3>The passive voice</h3><span class="pts">8 pts</span></div>
     <p class="instr">Qui fait l'action n'est pas important : on utilise la voix passive (be + participe passé).</p>
     <ol class="q">
-      <li>The candidates <select id="pv_1"><option value=""></option><option>are interviewed</option><option>interview</option><option>interviews</option></select> by the manager.</li>
-      <li>Théo <select id="pv_2"><option value=""></option><option>is hired</option><option>was hired</option><option>hired</option></select> for the job last week.</li>
+      <li>The candidates <select id="pv_1"><option value=""></option><option>interview</option><option>interviews</option><option>are interviewed</option></select> by the manager.</li>
+      <li>Théo <select id="pv_2"><option value=""></option><option>is hired</option><option>hired</option><option>was hired</option></select> for the job last week.</li>
       <li>The orders <select id="pv_3"><option value=""></option><option>prepare</option><option>prepared</option><option>are prepared</option></select> every morning.</li>
-      <li>The goods <select id="pv_4"><option value=""></option><option>delivered</option><option>were delivered</option><option>are delivered</option></select> yesterday.</li>
-      <li>English <select id="pv_5"><option value=""></option><option>is used</option><option>used</option><option>uses</option></select> in many logistics jobs.</li>
-      <li>The contract <select id="pv_6"><option value=""></option><option>will sign</option><option>signs</option><option>will be signed</option></select> next week.</li>
-      <li>Thousands of packages <select id="pv_7"><option value=""></option><option>send</option><option>are sent</option><option>sent</option></select> every day.</li>
-      <li>The warehouse <select id="pv_8"><option value=""></option><option>was built</option><option>built</option><option>builds</option></select> in 2015.</li>
+      <li>The goods <select id="pv_4"><option value=""></option><option>were delivered</option><option>delivered</option><option>are delivered</option></select> yesterday.</li>
+      <li>English <select id="pv_5"><option value=""></option><option>used</option><option>is used</option><option>uses</option></select> in many logistics jobs.</li>
+      <li>The contract <select id="pv_6"><option value=""></option><option>signs</option><option>will be signed</option><option>will sign</option></select> next week.</li>
+      <li>Thousands of packages <select id="pv_7"><option value=""></option><option>sent</option><option>send</option><option>are sent</option></select> every day.</li>
+      <li>The warehouse <select id="pv_8"><option value=""></option><option>builds</option><option>built</option><option>was built</option></select> in 2015.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="PV Passive">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -324,13 +324,13 @@
     <div class="head"><span class="ico">⚠️</span><h3>Interview advice (modals)</h3><span class="pts">8 pts</span></div>
     <p class="instr">Conseil, obligation, interdiction ou pas nécessaire ? Choisis le modal qui a le bon sens.</p>
     <ol class="q">
-      <li>It's a good idea: you <select id="mod_1"><option value=""></option><option>may</option><option>can</option><option>should</option></select> research the company before the interview.</li>
-      <li>It is strictly forbidden: you <select id="mod_2"><option value=""></option><option>mustn't</option><option>shouldn't</option><option>don't have to</option></select> be late — arrive early!</li>
-      <li>It's a rule: you <select id="mod_3"><option value=""></option><option>can</option><option>may</option><option>must</option></select> bring your ID card to enter the building.</li>
-      <li>Never do this in an interview: you <select id="mod_4"><option value=""></option><option>don't have to</option><option>shouldn't</option><option>mustn't</option></select> lie about your skills.</li>
+      <li>It's a good idea: you <select id="mod_1"><option value=""></option><option>should</option><option>may</option><option>can</option></select> research the company before the interview.</li>
+      <li>It is strictly forbidden: you <select id="mod_2"><option value=""></option><option>don't have to</option><option>mustn't</option><option>shouldn't</option></select> be late — arrive early!</li>
+      <li>It's a rule: you <select id="mod_3"><option value=""></option><option>can</option><option>must</option><option>may</option></select> bring your ID card to enter the building.</li>
+      <li>Never do this in an interview: you <select id="mod_4"><option value=""></option><option>mustn't</option><option>shouldn't</option><option>don't have to</option></select> lie about your skills.</li>
       <li>The dress code is relaxed, so you <select id="mod_5"><option value=""></option><option>shouldn't</option><option>don't have to</option><option>mustn't</option></select> wear a tie.</li>
-      <li>It's obligatory: you <select id="mod_6"><option value=""></option><option>may</option><option>can</option><option>must</option></select> turn off your phone during the interview.</li>
-      <li>It's only advice: you <select id="mod_7"><option value=""></option><option>can't</option><option>shouldn't</option><option>mustn't</option></select> speak too fast.</li>
+      <li>It's obligatory: you <select id="mod_6"><option value=""></option><option>may</option><option>must</option><option>can</option></select> turn off your phone during the interview.</li>
+      <li>It's only advice: you <select id="mod_7"><option value=""></option><option>can't</option><option>mustn't</option><option>shouldn't</option></select> speak too fast.</li>
       <li>It's optional: at the end, you <select id="mod_8"><option value=""></option><option>must</option><option>can</option><option>have to</option></select> ask a few questions if you want.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="MOD Modals">✓ Validate</button><span class="modmsg"></span></div>
@@ -341,11 +341,11 @@
     <div class="head"><span class="ico">💬</span><h3>Reported speech (said / told)</h3><span class="pts">6 pts</span></div>
     <p class="instr">On rapporte ce qui a été dit à l'entretien. Attention : say / tell (+ personne), et le temps recule (want → wanted).</p>
     <ol class="q">
-      <li>"I want this internship," said Théo. → Théo said he <select id="rs_1"><option value=""></option><option>want</option><option>wants</option><option>wanted</option></select> the internship.</li>
-      <li>The manager <select id="rs_2"><option value=""></option><option>says</option><option>said</option><option>told</option></select> Théo that the job was hard.</li>
-      <li>Théo <select id="rs_3"><option value=""></option><option>said</option><option>say</option><option>told</option></select> that he was organized.</li>
-      <li>"I can start in June." → Théo said he <select id="rs_4"><option value=""></option><option>could</option><option>can</option><option>will</option></select> start in June.</li>
-      <li>"We are happy to offer you the job." → The manager said they <select id="rs_5"><option value=""></option><option>is</option><option>are</option><option>were</option></select> happy.</li>
+      <li>"I want this internship," said Théo. → Théo said he <select id="rs_1"><option value=""></option><option>wanted</option><option>wants</option><option>want</option></select> the internship.</li>
+      <li>The manager <select id="rs_2"><option value=""></option><option>said</option><option>says</option><option>told</option></select> Théo that the job was hard.</li>
+      <li>Théo <select id="rs_3"><option value=""></option><option>told</option><option>say</option><option>said</option></select> that he was organized.</li>
+      <li>"I can start in June." → Théo said he <select id="rs_4"><option value=""></option><option>can</option><option>could</option><option>will</option></select> start in June.</li>
+      <li>"We are happy to offer you the job." → The manager said they <select id="rs_5"><option value=""></option><option>are</option><option>were</option><option>is</option></select> happy.</li>
       <li>"I work hard," said Théo. → Théo said he <select id="rs_6"><option value=""></option><option>works</option><option>worked</option><option>work</option></select> hard.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="RS Reported">✓ Validate</button><span class="modmsg"></span></div>
@@ -429,35 +429,52 @@ function updateSubmitGate(){
   }
 }
 
-function confettiBurst(){
-  var box=document.getElementById("confetti");
-  var cols=CONF_COLORS;
-  for(var i=0;i<90;i++){
-    var c=document.createElement("div");c.className="conf";
-    c.style.left=(i/90*100)+"%";
-    c.style.background=cols[i%cols.length];
-    c.style.animationDuration=(2.2+ (i%5)*0.4)+"s";
-    c.style.animationDelay=((i%9)*0.06)+"s";
-    c.style.transform="rotate("+((i*37)%360)+"deg)";
-    box.appendChild(c);
-    (function(el){setTimeout(function(){el.remove();},4200);})(c);
-  }
+/* ---------- Confetti engine (vanilla canvas, physics — burst + gravity + spin + fade) ---------- */
+var _cv,_ctx,_parts=[],_raf=null;
+function _confInit(){
+  _cv=document.getElementById("confetti"); if(!_cv||!_cv.getContext) return;
+  _ctx=_cv.getContext("2d"); _confResize(); window.addEventListener("resize",_confResize);
 }
-
-// radial "explosion" from a point (x,y)
-function boom(x,y){
-  var box=document.getElementById("confetti");
-  var cols=CONF_COLORS;
-  for(var i=0;i<32;i++){
-    var ang=Math.PI*2*i/32, dist=70+(i%5)*30;
-    var p=document.createElement("div");p.className="burst-p";
-    p.style.left=x+"px";p.style.top=y+"px";p.style.background=cols[i%cols.length];
-    p.style.setProperty("--dx",(Math.cos(ang)*dist).toFixed(1)+"px");
-    p.style.setProperty("--dy",(Math.sin(ang)*dist).toFixed(1)+"px");
-    p.style.setProperty("--r",((i*47)%360)+"deg");
-    box.appendChild(p);
-    (function(el){setTimeout(function(){el.remove();},950);})(p);
+function _confResize(){ if(!_cv) return; _cv.width=window.innerWidth; _cv.height=window.innerHeight; }
+// physics burst of n particles shooting out from (x,y)
+function burst(x,y,n,power){
+  if(!_ctx) _confInit(); if(!_ctx) return;
+  n=n||90; power=power||1; var cols=CONF_COLORS;
+  for(var i=0;i<n;i++){
+    var ang=Math.random()*Math.PI*2, spd=(3+Math.random()*7)*power;
+    _parts.push({x:x,y:y,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd-4,
+      g:0.16+Math.random()*0.14, size:5+Math.random()*7,
+      rot:Math.random()*6.28, vr:(Math.random()-0.5)*0.45,
+      color:cols[(Math.random()*cols.length)|0],
+      life:55+Math.random()*45, age:0, shape:Math.random()<0.5?"rect":"circ"});
   }
+  if(!_raf) _raf=requestAnimationFrame(_confTick);
+}
+function _confTick(){
+  if(!_ctx) return;
+  _ctx.clearRect(0,0,_cv.width,_cv.height);
+  for(var i=_parts.length-1;i>=0;i--){
+    var p=_parts[i]; p.age++; p.vy+=p.g; p.vx*=0.99; p.x+=p.vx; p.y+=p.vy; p.rot+=p.vr;
+    var a=Math.max(0,1-p.age/p.life);
+    _ctx.save(); _ctx.globalAlpha=a; _ctx.translate(p.x,p.y); _ctx.rotate(p.rot); _ctx.fillStyle=p.color;
+    if(p.shape==="rect") _ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+    else { _ctx.beginPath(); _ctx.arc(0,0,p.size/2,0,6.28); _ctx.fill(); }
+    _ctx.restore();
+    if(p.age>=p.life || p.y>_cv.height+50) _parts.splice(i,1);
+  }
+  if(_parts.length) _raf=requestAnimationFrame(_confTick);
+  else { _raf=null; _ctx.clearRect(0,0,_cv.width,_cv.height); }
+}
+// section-perfect explosion from a point (name/signature kept for validateSection)
+function boom(x,y){ burst(x,y,70,1.2); }
+// final win: staggered mega-celebration across the top of the screen (name kept for submitPaper)
+function confettiBurst(){
+  if(!_ctx) _confInit();
+  burst(window.innerWidth/2, window.innerHeight*0.35, 120, 1.4);
+  var n=0, iv=setInterval(function(){
+    burst(Math.random()*window.innerWidth, Math.random()*window.innerHeight*0.5, 80, 1.3);
+    if(++n>=9) clearInterval(iv);
+  },160);
 }
 
 // mark one item: color it, reveal the right answer if wrong, then LOCK it (no changing an error afterwards)
@@ -624,6 +641,7 @@ document.addEventListener("click",function(e){
 })();
 updateProgress();
 updateSubmitGate();
+_confInit();
 </script>
 </body>
 </html>

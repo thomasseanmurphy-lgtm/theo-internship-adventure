@@ -202,7 +202,7 @@
 <body>
 
 <span class="deco d1">🏭</span><span class="deco d2">🚚</span><span class="deco d3">🤖</span><span class="deco d4">📄</span>
-<div id="confetti"></div>
+<canvas id="confetti"></canvas>
 
 <div class="page">
 
@@ -237,14 +237,14 @@
   <div class="card c-pink">
     <div class="head"><span class="ico">🧩</span><h3>Match the word &amp; the meaning</h3><span class="pts">8 pts</span></div>
     <ol class="q vmatch">
-      <li>an area with many companies and factories → <select class="wide" id="a1_1"><option value=""></option><option>internship</option><option>loading dock</option><option>forklift</option><option>supervisor</option><option>CV</option><option>warehouse</option><option>supplier</option><option>industrial park</option></select></li>
-      <li>a big building where goods are stored → <select class="wide" id="a1_2"><option value=""></option><option>CV</option><option>internship</option><option>loading dock</option><option>forklift</option><option>supervisor</option><option>supplier</option><option>warehouse</option><option>industrial park</option></select></li>
-      <li>a period of work experience for a student → <select class="wide" id="a1_3"><option value=""></option><option>supervisor</option><option>loading dock</option><option>supplier</option><option>CV</option><option>industrial park</option><option>internship</option><option>warehouse</option><option>forklift</option></select></li>
-      <li>a document that lists your studies and skills → <select class="wide" id="a1_4"><option value=""></option><option>CV</option><option>internship</option><option>industrial park</option><option>supervisor</option><option>supplier</option><option>warehouse</option><option>forklift</option><option>loading dock</option></select></li>
-      <li>the person who manages a team → <select class="wide" id="a1_5"><option value=""></option><option>CV</option><option>forklift</option><option>loading dock</option><option>warehouse</option><option>internship</option><option>supplier</option><option>supervisor</option><option>industrial park</option></select></li>
-      <li>a small truck that lifts and moves pallets → <select class="wide" id="a1_6"><option value=""></option><option>industrial park</option><option>internship</option><option>supervisor</option><option>forklift</option><option>supplier</option><option>warehouse</option><option>CV</option><option>loading dock</option></select></li>
-      <li>the area where trucks load and unload → <select class="wide" id="a1_7"><option value=""></option><option>forklift</option><option>supervisor</option><option>industrial park</option><option>internship</option><option>supplier</option><option>loading dock</option><option>CV</option><option>warehouse</option></select></li>
-      <li>a company that provides goods to another → <select class="wide" id="a1_8"><option value=""></option><option>supervisor</option><option>warehouse</option><option>loading dock</option><option>industrial park</option><option>internship</option><option>CV</option><option>forklift</option><option>supplier</option></select></li>
+      <li>an area with many companies and factories → <select class="wide" id="a1_1"><option value=""></option><option>supplier</option><option>loading dock</option><option>industrial park</option><option>forklift</option><option>internship</option><option>warehouse</option><option>CV</option><option>supervisor</option></select></li>
+      <li>a big building where goods are stored → <select class="wide" id="a1_2"><option value=""></option><option>loading dock</option><option>internship</option><option>supervisor</option><option>CV</option><option>supplier</option><option>forklift</option><option>warehouse</option><option>industrial park</option></select></li>
+      <li>a period of work experience for a student → <select class="wide" id="a1_3"><option value=""></option><option>CV</option><option>forklift</option><option>supervisor</option><option>industrial park</option><option>warehouse</option><option>supplier</option><option>internship</option><option>loading dock</option></select></li>
+      <li>a document that lists your studies and skills → <select class="wide" id="a1_4"><option value=""></option><option>forklift</option><option>loading dock</option><option>internship</option><option>supervisor</option><option>CV</option><option>industrial park</option><option>warehouse</option><option>supplier</option></select></li>
+      <li>the person who manages a team → <select class="wide" id="a1_5"><option value=""></option><option>industrial park</option><option>warehouse</option><option>supplier</option><option>loading dock</option><option>CV</option><option>supervisor</option><option>forklift</option><option>internship</option></select></li>
+      <li>a small truck that lifts and moves pallets → <select class="wide" id="a1_6"><option value=""></option><option>industrial park</option><option>CV</option><option>internship</option><option>supplier</option><option>loading dock</option><option>forklift</option><option>warehouse</option><option>supervisor</option></select></li>
+      <li>the area where trucks load and unload → <select class="wide" id="a1_7"><option value=""></option><option>supplier</option><option>loading dock</option><option>supervisor</option><option>CV</option><option>warehouse</option><option>internship</option><option>forklift</option><option>industrial park</option></select></li>
+      <li>a company that provides goods to another → <select class="wide" id="a1_8"><option value=""></option><option>forklift</option><option>supplier</option><option>internship</option><option>supervisor</option><option>CV</option><option>industrial park</option><option>loading dock</option><option>warehouse</option></select></li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="A1 Match">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -253,14 +253,14 @@
   <div class="card c-mint">
     <div class="head"><span class="ico">🔤</span><h3>Complete the sentence</h3><span class="pts">8 pts</span></div>
     <ol class="q">
-      <li>Théo is looking for an <select class="wide" id="a2_1"><option value=""></option><option>interview</option><option>internship</option><option>CV</option><option>supervisor</option><option>apply</option><option>warehouse</option><option>loading dock</option><option>forklift</option></select> for the summer.</li>
-      <li>The company stores its goods in a huge <select class="wide" id="a2_2"><option value=""></option><option>warehouse</option><option>supervisor</option><option>internship</option><option>CV</option><option>forklift</option><option>apply</option><option>interview</option><option>loading dock</option></select>.</li>
-      <li>He wants to <select class="wide" id="a2_3"><option value=""></option><option>warehouse</option><option>supervisor</option><option>forklift</option><option>internship</option><option>interview</option><option>apply</option><option>loading dock</option><option>CV</option></select> for the job online.</li>
-      <li>He gave his <select class="wide" id="a2_4"><option value=""></option><option>loading dock</option><option>apply</option><option>internship</option><option>interview</option><option>supervisor</option><option>warehouse</option><option>CV</option><option>forklift</option></select> to the supervisor.</li>
-      <li>A <select class="wide" id="a2_5"><option value=""></option><option>forklift</option><option>warehouse</option><option>supervisor</option><option>internship</option><option>interview</option><option>loading dock</option><option>apply</option><option>CV</option></select> moves the pallets in the yard.</li>
-      <li>Trucks load and unload at the <select class="wide" id="a2_6"><option value=""></option><option>warehouse</option><option>loading dock</option><option>forklift</option><option>interview</option><option>CV</option><option>internship</option><option>supervisor</option><option>apply</option></select>.</li>
-      <li>The <select class="wide" id="a2_7"><option value=""></option><option>supervisor</option><option>interview</option><option>forklift</option><option>warehouse</option><option>CV</option><option>apply</option><option>internship</option><option>loading dock</option></select> showed Théo around the site.</li>
-      <li>Next week he has an <select class="wide" id="a2_8"><option value=""></option><option>CV</option><option>warehouse</option><option>internship</option><option>forklift</option><option>interview</option><option>loading dock</option><option>apply</option><option>supervisor</option></select> with the manager.</li>
+      <li>Théo is looking for an <select class="wide" id="a2_1"><option value=""></option><option>internship</option><option>forklift</option><option>interview</option><option>loading dock</option><option>warehouse</option><option>CV</option><option>supervisor</option><option>apply</option></select> for the summer.</li>
+      <li>The company stores its goods in a huge <select class="wide" id="a2_2"><option value=""></option><option>forklift</option><option>interview</option><option>supervisor</option><option>CV</option><option>internship</option><option>warehouse</option><option>loading dock</option><option>apply</option></select>.</li>
+      <li>He wants to <select class="wide" id="a2_3"><option value=""></option><option>supervisor</option><option>CV</option><option>warehouse</option><option>apply</option><option>interview</option><option>forklift</option><option>loading dock</option><option>internship</option></select> for the job online.</li>
+      <li>He gave his <select class="wide" id="a2_4"><option value=""></option><option>warehouse</option><option>forklift</option><option>supervisor</option><option>apply</option><option>interview</option><option>CV</option><option>internship</option><option>loading dock</option></select> to the supervisor.</li>
+      <li>A <select class="wide" id="a2_5"><option value=""></option><option>supervisor</option><option>loading dock</option><option>apply</option><option>warehouse</option><option>interview</option><option>internship</option><option>CV</option><option>forklift</option></select> moves the pallets in the yard.</li>
+      <li>Trucks load and unload at the <select class="wide" id="a2_6"><option value=""></option><option>CV</option><option>forklift</option><option>interview</option><option>internship</option><option>apply</option><option>supervisor</option><option>loading dock</option><option>warehouse</option></select>.</li>
+      <li>The <select class="wide" id="a2_7"><option value=""></option><option>interview</option><option>forklift</option><option>loading dock</option><option>apply</option><option>internship</option><option>warehouse</option><option>supervisor</option><option>CV</option></select> showed Théo around the site.</li>
+      <li>Next week he has an <select class="wide" id="a2_8"><option value=""></option><option>supervisor</option><option>internship</option><option>warehouse</option><option>interview</option><option>CV</option><option>forklift</option><option>apply</option><option>loading dock</option></select> with the manager.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="A2 Gap-fill">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -269,14 +269,14 @@
   <div class="card c-sun">
     <div class="head"><span class="ico">⏳</span><h3>Present perfect or past simple?</h3><span class="pts">8 pts</span></div>
     <ol class="q">
-      <li><span class="tw">Since this morning</span>, Théo <select id="b1_1"><option value=""></option><option>visits</option><option>visited</option><option>has visited</option></select> five companies.</li>
-      <li><span class="tw">Yesterday</span>, he <select id="b1_2"><option value=""></option><option>prints</option><option>has printed</option><option>printed</option></select> his CV.</li>
-      <li>This company <select id="b1_3"><option value=""></option><option>has been</option><option>is</option><option>was</option></select> in the town <span class="tw">for twenty years</span>.</li>
-      <li>He <select id="b1_4"><option value=""></option><option>has talked</option><option>talks</option><option>talked</option></select> to a supervisor <span class="tw">five minutes ago</span>.</li>
-      <li>He <select id="b1_5"><option value=""></option><option>doesn't find</option><option>didn't find</option><option>hasn't found</option></select> an internship <span class="tw">yet</span>.</li>
-      <li><select id="b1_6"><option value=""></option><option>Did</option><option>Do</option><option>Have</option></select> you <span class="tw">ever</span> visited a modern warehouse?</li>
-      <li>The company has <span class="tw">just</span> <select id="b1_7"><option value=""></option><option>installs</option><option>install</option><option>installed</option></select> ten new robots.</li>
-      <li><span class="tw">In 2015</span>, the company <select id="b1_8"><option value=""></option><option>opens</option><option>has opened</option><option>opened</option></select> a new hub.</li>
+      <li><span class="tw">Since this morning</span>, Théo <select id="b1_1"><option value=""></option><option>visited</option><option>has visited</option><option>visits</option></select> five companies.</li>
+      <li><span class="tw">Yesterday</span>, he <select id="b1_2"><option value=""></option><option>has printed</option><option>printed</option><option>prints</option></select> his CV.</li>
+      <li>This company <select id="b1_3"><option value=""></option><option>has been</option><option>was</option><option>is</option></select> in the town <span class="tw">for twenty years</span>.</li>
+      <li>He <select id="b1_4"><option value=""></option><option>has talked</option><option>talked</option><option>talks</option></select> to a supervisor <span class="tw">five minutes ago</span>.</li>
+      <li>He <select id="b1_5"><option value=""></option><option>hasn't found</option><option>didn't find</option><option>doesn't find</option></select> an internship <span class="tw">yet</span>.</li>
+      <li><select id="b1_6"><option value=""></option><option>Do</option><option>Have</option><option>Did</option></select> you <span class="tw">ever</span> visited a modern warehouse?</li>
+      <li>The company has <span class="tw">just</span> <select id="b1_7"><option value=""></option><option>installs</option><option>installed</option><option>install</option></select> ten new robots.</li>
+      <li><span class="tw">In 2015</span>, the company <select id="b1_8"><option value=""></option><option>has opened</option><option>opened</option><option>opens</option></select> a new hub.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="B1 Perfect/Past">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -286,11 +286,11 @@
     <div class="head"><span class="ico">🇫🇷</span><h3>Traduis : present perfect ou prétérit ?</h3><span class="pts">8 pts</span></div>
     <p class="instr">Lis la phrase française et choisis la bonne traduction anglaise. Le repère de temps te dit quel temps utiliser.</p>
     <ol class="q vmatch">
-      <li>« Hier, Théo a envoyé trois candidatures. » <select id="tr_1"><option value=""></option><option>Yesterday, Théo sent three applications.</option><option>Yesterday, Théo has sent three applications.</option></select></li>
+      <li>« Hier, Théo a envoyé trois candidatures. » <select id="tr_1"><option value=""></option><option>Yesterday, Théo has sent three applications.</option><option>Yesterday, Théo sent three applications.</option></select></li>
       <li>« Il travaille dur depuis septembre. » <select id="tr_2"><option value=""></option><option>He has worked hard since September.</option><option>He worked hard since September.</option></select></li>
       <li>« L'entreprise emploie deux cents personnes. » <select id="tr_3"><option value=""></option><option>The company employs two hundred people.</option><option>The company employed two hundred people.</option></select></li>
       <li>« L'année dernière, l'usine a gagné un prix de sécurité. » <select id="tr_4"><option value=""></option><option>Last year, the factory has won a safety award.</option><option>Last year, the factory won a safety award.</option></select></li>
-      <li>« As-tu déjà visité une zone industrielle ? » <select id="tr_5"><option value=""></option><option>Have you ever visited an industrial park?</option><option>Did you ever visit an industrial park?</option></select></li>
+      <li>« As-tu déjà visité une zone industrielle ? » <select id="tr_5"><option value=""></option><option>Did you ever visit an industrial park?</option><option>Have you ever visited an industrial park?</option></select></li>
       <li>« Ils cherchent un stagiaire depuis deux semaines. » <select id="tr_6"><option value=""></option><option>They have looked for a trainee for two weeks.</option><option>They looked for a trainee for two weeks.</option></select></li>
       <li>« Il y a trois jours, il a téléphoné à l'entreprise. » <select id="tr_7"><option value=""></option><option>Three days ago, he called the company.</option><option>Three days ago, he has called the company.</option></select></li>
       <li>« Nous n'avons pas encore reçu de réponse. » <select id="tr_8"><option value=""></option><option>We haven't received an answer yet.</option><option>We didn't receive an answer yet.</option></select></li>
@@ -304,13 +304,13 @@
     <p class="instr">Théo passe en revue les qualités et les défauts. Choisis le bon adjectif.</p>
     <ol class="q">
       <li>The new warehouse is very <select id="adj_1"><option value=""></option><option>tidy</option><option>messy</option><option>dark</option></select>: everything is in its place.</li>
-      <li>The first company looked <select id="adj_2"><option value=""></option><option>clean</option><option>run-down</option><option>modern</option></select>: broken windows and old trucks.</li>
-      <li>The staff were friendly and <select id="adj_3"><option value=""></option><option>helpful</option><option>lazy</option><option>rude</option></select>.</li>
-      <li>The robots make the site very <select id="adj_4"><option value=""></option><option>dirty</option><option>slow</option><option>efficient</option></select>.</li>
-      <li>The offices were bright and <select id="adj_5"><option value=""></option><option>old-fashioned</option><option>dark</option><option>modern</option></select>.</li>
+      <li>The first company looked <select id="adj_2"><option value=""></option><option>run-down</option><option>clean</option><option>modern</option></select>: broken windows and old trucks.</li>
+      <li>The staff were friendly and <select id="adj_3"><option value=""></option><option>rude</option><option>lazy</option><option>helpful</option></select>.</li>
+      <li>The robots make the site very <select id="adj_4"><option value=""></option><option>efficient</option><option>dirty</option><option>slow</option></select>.</li>
+      <li>The offices were bright and <select id="adj_5"><option value=""></option><option>dark</option><option>old-fashioned</option><option>modern</option></select>.</li>
       <li>The manager was <select id="adj_6"><option value=""></option><option>polite</option><option>rude</option><option>nervous</option></select> and answered all his questions.</li>
-      <li>Théo felt <select id="adj_7"><option value=""></option><option>bored</option><option>nervous</option><option>proud</option></select>, but he stayed calm.</li>
-      <li>The whole place was well <select id="adj_8"><option value=""></option><option>organized</option><option>messy</option><option>noisy</option></select> and clean.</li>
+      <li>Théo felt <select id="adj_7"><option value=""></option><option>nervous</option><option>bored</option><option>proud</option></select>, but he stayed calm.</li>
+      <li>The whole place was well <select id="adj_8"><option value=""></option><option>noisy</option><option>messy</option><option>organized</option></select> and clean.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="ADJ Adjectives">✓ Validate</button><span class="modmsg"></span></div>
   </div>
@@ -319,13 +319,13 @@
   <div class="card c-grape">
     <div class="head"><span class="ico">📊</span><h3>Compare the companies</h3><span class="pts">8 pts</span></div>
     <ol class="q">
-      <li>The new warehouse is <select id="b3_1"><option value=""></option><option>more modern</option><option>modernest</option><option>most modern</option></select> than the old one.</li>
+      <li>The new warehouse is <select id="b3_1"><option value=""></option><option>modernest</option><option>more modern</option><option>most modern</option></select> than the old one.</li>
       <li>This company is the <select id="b3_2"><option value=""></option><option>big</option><option>bigger</option><option>biggest</option></select> on the estate.</li>
-      <li>The robots are <select id="b3_3"><option value=""></option><option>fastest</option><option>faster</option><option>fast</option></select> than people.</li>
-      <li>The first firm was not as <select id="b3_4"><option value=""></option><option>cleaner</option><option>cleanest</option><option>clean</option></select> as the second.</li>
+      <li>The robots are <select id="b3_3"><option value=""></option><option>fast</option><option>faster</option><option>fastest</option></select> than people.</li>
+      <li>The first firm was not as <select id="b3_4"><option value=""></option><option>clean</option><option>cleaner</option><option>cleanest</option></select> as the second.</li>
       <li>This site is <select id="b3_5"><option value=""></option><option>better</option><option>gooder</option><option>best</option></select> organized than the other.</li>
-      <li>The second company has <select id="b3_6"><option value=""></option><option>most</option><option>much</option><option>more</option></select> trucks than the first.</li>
-      <li>There are <select id="b3_7"><option value=""></option><option>least</option><option>fewer</option><option>less</option></select> workers here than before.</li>
+      <li>The second company has <select id="b3_6"><option value=""></option><option>much</option><option>most</option><option>more</option></select> trucks than the first.</li>
+      <li>There are <select id="b3_7"><option value=""></option><option>less</option><option>fewer</option><option>least</option></select> workers here than before.</li>
       <li>It is the <select id="b3_8"><option value=""></option><option>most impressive</option><option>more impressive</option><option>impressivest</option></select> company he has ever seen.</li>
     </ol>
     <div class="modfoot"><button type="button" class="btn-val" data-act="validate" data-sec="B3 Compare">✓ Validate</button><span class="modmsg"></span></div>
@@ -409,35 +409,52 @@ function updateSubmitGate(){
   }
 }
 
-function confettiBurst(){
-  var box=document.getElementById("confetti");
-  var cols=CONF_COLORS;
-  for(var i=0;i<90;i++){
-    var c=document.createElement("div");c.className="conf";
-    c.style.left=(i/90*100)+"%";
-    c.style.background=cols[i%cols.length];
-    c.style.animationDuration=(2.2+ (i%5)*0.4)+"s";
-    c.style.animationDelay=((i%9)*0.06)+"s";
-    c.style.transform="rotate("+((i*37)%360)+"deg)";
-    box.appendChild(c);
-    (function(el){setTimeout(function(){el.remove();},4200);})(c);
-  }
+/* ---------- Confetti engine (vanilla canvas, physics — burst + gravity + spin + fade) ---------- */
+var _cv,_ctx,_parts=[],_raf=null;
+function _confInit(){
+  _cv=document.getElementById("confetti"); if(!_cv||!_cv.getContext) return;
+  _ctx=_cv.getContext("2d"); _confResize(); window.addEventListener("resize",_confResize);
 }
-
-// radial "explosion" from a point (x,y)
-function boom(x,y){
-  var box=document.getElementById("confetti");
-  var cols=CONF_COLORS;
-  for(var i=0;i<32;i++){
-    var ang=Math.PI*2*i/32, dist=70+(i%5)*30;
-    var p=document.createElement("div");p.className="burst-p";
-    p.style.left=x+"px";p.style.top=y+"px";p.style.background=cols[i%cols.length];
-    p.style.setProperty("--dx",(Math.cos(ang)*dist).toFixed(1)+"px");
-    p.style.setProperty("--dy",(Math.sin(ang)*dist).toFixed(1)+"px");
-    p.style.setProperty("--r",((i*47)%360)+"deg");
-    box.appendChild(p);
-    (function(el){setTimeout(function(){el.remove();},950);})(p);
+function _confResize(){ if(!_cv) return; _cv.width=window.innerWidth; _cv.height=window.innerHeight; }
+// physics burst of n particles shooting out from (x,y)
+function burst(x,y,n,power){
+  if(!_ctx) _confInit(); if(!_ctx) return;
+  n=n||90; power=power||1; var cols=CONF_COLORS;
+  for(var i=0;i<n;i++){
+    var ang=Math.random()*Math.PI*2, spd=(3+Math.random()*7)*power;
+    _parts.push({x:x,y:y,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd-4,
+      g:0.16+Math.random()*0.14, size:5+Math.random()*7,
+      rot:Math.random()*6.28, vr:(Math.random()-0.5)*0.45,
+      color:cols[(Math.random()*cols.length)|0],
+      life:55+Math.random()*45, age:0, shape:Math.random()<0.5?"rect":"circ"});
   }
+  if(!_raf) _raf=requestAnimationFrame(_confTick);
+}
+function _confTick(){
+  if(!_ctx) return;
+  _ctx.clearRect(0,0,_cv.width,_cv.height);
+  for(var i=_parts.length-1;i>=0;i--){
+    var p=_parts[i]; p.age++; p.vy+=p.g; p.vx*=0.99; p.x+=p.vx; p.y+=p.vy; p.rot+=p.vr;
+    var a=Math.max(0,1-p.age/p.life);
+    _ctx.save(); _ctx.globalAlpha=a; _ctx.translate(p.x,p.y); _ctx.rotate(p.rot); _ctx.fillStyle=p.color;
+    if(p.shape==="rect") _ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+    else { _ctx.beginPath(); _ctx.arc(0,0,p.size/2,0,6.28); _ctx.fill(); }
+    _ctx.restore();
+    if(p.age>=p.life || p.y>_cv.height+50) _parts.splice(i,1);
+  }
+  if(_parts.length) _raf=requestAnimationFrame(_confTick);
+  else { _raf=null; _ctx.clearRect(0,0,_cv.width,_cv.height); }
+}
+// section-perfect explosion from a point (name/signature kept for validateSection)
+function boom(x,y){ burst(x,y,70,1.2); }
+// final win: staggered mega-celebration across the top of the screen (name kept for submitPaper)
+function confettiBurst(){
+  if(!_ctx) _confInit();
+  burst(window.innerWidth/2, window.innerHeight*0.35, 120, 1.4);
+  var n=0, iv=setInterval(function(){
+    burst(Math.random()*window.innerWidth, Math.random()*window.innerHeight*0.5, 80, 1.3);
+    if(++n>=9) clearInterval(iv);
+  },160);
 }
 
 // mark one item: color it, reveal the right answer if wrong, then LOCK it (no changing an error afterwards)
@@ -604,6 +621,7 @@ document.addEventListener("click",function(e){
 })();
 updateProgress();
 updateSubmitGate();
+_confInit();
 </script>
 </body>
 </html>
